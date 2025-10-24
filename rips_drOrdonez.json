@@ -1,0 +1,49 @@
+{
+  "numDocumentoIdObligado": "19085105",
+  "numFactura": "AFG-2073",
+  "tipoNota": "",
+  "numNota": "",
+  "usuarios": [
+    {
+      "tipoDocumentoIdentificacion": "CC",
+      "numDocumentoIdentificacion": "52211215",
+      "tipoUsuario": "01",
+      "fechaNacimiento": "1973-04-24",
+      "codSexo": "F",
+      "codPaisResidencia": "170",
+      "codMunicipioResidencia": "11001",
+      "codZonaTerritorialResidencia": "02",
+      "incapacidad": "NO",
+      "codPaisOrigen": "170",
+      "consecutivo": 1,
+      "servicios": {
+        "procedimientos": [
+          {
+            "codPrestador": "110010136201",
+            "fechaInicioAtencion": "2025-09-30 07:00",
+            "idMIPRES": "",
+            "numAutorizacion": "",
+            "codProcedimiento": "814731",
+            "viaIngresoServicioSalud": "01",
+            "modalidadGrupoServicioTecSal": "01",
+            "grupoServicios": "01",
+            "codServicio": 326,
+            "finalidadTecnologiaSalud": "16",
+            "tipoDocumentoIdentificacion": "CC",
+            "numDocumentoIdentificacion": "19085105",
+            "codDiagnosticoPrincipal": "M239",
+            "codDiagnosticoRelacionado": null,
+            "codComplicacion": null,
+            "vrServicio": 2672000,
+            "conceptoRecaudo": "04",
+            "valorPagoModerador": 0,
+            "numFEVPagoModerador": "",
+            "consecutivo": 1
+          }
+        ]
+      }
+    }
+
+  ]
+    
+}
