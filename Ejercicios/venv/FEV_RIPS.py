@@ -4,16 +4,16 @@ import numpy as np
 import inspect
 
 # 📥 Cargar archivo Excel
-archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_JairoCorrea\\drCorrea_092025.xlsx"
+archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_Ordonez\\RIPS CONSULTA MED PLUS OCTUBRE 2025.xlsx"
 xls = pd.ExcelFile(archivo_excel)
 
 # 🧩 Funciones auxiliares
 def cargar_transaccion(df):
     return {
         "numDocumentoIdObligado": df.at[0, "numDocumentoIdObligado"],
-        "numNota": df.at[0, "numNota"],
+        "numNota": "",
         "tipoNota": "RS",
-        "numFactura": None,
+        "numFactura": df.at[0, "numFactura"],
         "codPrestador": df.at[0, "codPrestador"]
     }
 
@@ -23,7 +23,7 @@ def cargar_usuarios(df):
         usuarios.append({
             "tipoDocumentoIdentificacion": row["tipoDocumento"],
             "numDocumentoIdentificacion": str(row["numDocumento"]),
-            "tipoUsuario": "12",
+            "tipoUsuario": "11",
             "fechaNacimiento": pd.to_datetime(row["fechaNacimiento"]).strftime('%Y-%m-%d'),
             "codSexo": str(row["codSexo"]),
             "codPaisResidencia": str(row["PaisResidencia"]),
@@ -50,7 +50,7 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
             consulta = {
                 "codPrestador": cod_prestador,  # Usar el código de prestador dinámico
                 "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),  # Corregido el nombre del campo
-                "numAutorizacion": "",
+                "numAutorizacion": str(row["numAutorizacion"]),
                 "codConsulta": str(row["CUPS"]),
                 "viaIngresoServicioSalud": "01",
                 "modalidadGrupoServicioTecSal": "01",
@@ -65,9 +65,9 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
                 "tipoDiagnosticoPrincipal": str(row["tipoDiagnosticoPrincipal"]),
                 "tipoDocumentoIdentificacion": "CC",
                 "numDocumentoIdentificacion": str(num_documento_obligado),  # Usar el documento del obligado
-                "vrServicio": 0,
-                "valorPagoModerador": 0,
-                "conceptoRecaudo": "05",
+                "vrServicio": row["vrServicio"],
+                "valorPagoModerador": row["valorPagoModerador"],
+                "conceptoRecaudo": "03",
                 "numFEVPagoModerador": "",
                 "consecutivo": i + 1
             }
@@ -83,7 +83,7 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
                 "codPrestador": cod_prestador,  # Usar el código de prestador dinámico
                 "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),  # Corregido el nombre del campo
                 "idMIPRES": "",
-                "numAutorizacion": "",
+                "numAutorizacion": str(row["numAutorizacion"]),
                 "codProcedimiento": str(row["CUPS"]),
                 "viaIngresoServicioSalud": "01",
                 "modalidadGrupoServicioTecSal": "01",
@@ -95,9 +95,9 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
                 "codDiagnosticoPrincipal": str(row["CIE10_Principal"]),
                 "codDiagnosticoRelacionado": None if pd.isna(row["CIE10_relacionado"]) else str(row["CIE10_relacionado"]),
                 "codComplicacion": None,
-                "vrServicio": 0,
-                "conceptoRecaudo": "05",
-                "valorPagoModerador": 0,
+                "vrServicio": row["vrServicio"],
+                "conceptoRecaudo": "03",
+                "valorPagoModerador": row["valorPagoModerador"],
                 "numFEVPagoModerador": "",
                 "consecutivo": i + 1
             }
@@ -162,9 +162,9 @@ usuarios = limpiar_servicios_vacios(usuarios)
 # JSON final
 rips_json = {
     "numDocumentoIdObligado": str(df_transaccion.at[0, "numDocumentoIdObligado"]),
-    "numFactura": "",
-    "tipoNota": "RS",
-    "numNota": str(df_transaccion.at[0, "numNota"]),
+    "numFactura": str(df_transaccion.at[0, "numFactura"]),
+    "tipoNota": "",
+    "numNota": "",
     "usuarios": usuarios
 }
 
@@ -190,7 +190,7 @@ def convert_numpy_types(obj):
 
 # Modifica la parte de guardado para limpiar los datos antes de serializar
 try:
-    ruta_salida = "C:\\CURSOS DEV\\PHYTON\\rips_generado.json"
+    ruta_salida = "C:\\CURSOS DEV\\PHYTON\\fev_rips_generado.json"
     
     # Reemplazar "nan" por null en todo el objeto antes de serializar
     def clean_nan_values(obj):
