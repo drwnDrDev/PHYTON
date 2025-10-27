@@ -44,12 +44,21 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
     cod_prestador = str(cod_prestador)
     
     # Procesar consultas
-    for i, row in df_consultas.iterrows():
+    # Crear un diccionario para mantener el contador de consultas por usuario
+    contadores_consultas = {}
+    
+    for _, row in df_consultas.iterrows():
         doc = str(row["IDPaciente"])
         if doc in usuarios_map:
+            # Inicializar contador si no existe para este usuario
+            if doc not in contadores_consultas:
+                contadores_consultas[doc] = 1
+            else:
+                contadores_consultas[doc] += 1
+                
             consulta = {
-                "codPrestador": cod_prestador,  # Usar el código de prestador dinámico
-                "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),  # Corregido el nombre del campo
+                "codPrestador": cod_prestador,
+                "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),
                 "numAutorizacion": str(row["numAutorizacion"]),
                 "codConsulta": str(row["CUPS"]),
                 "viaIngresoServicioSalud": "01",
@@ -64,24 +73,33 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
                 "codDiagnosticoRelacionado3": None if pd.isna(row["CIE10_relacionado3"]) else str(row["CIE10_relacionado3"]),
                 "tipoDiagnosticoPrincipal": str(row["tipoDiagnosticoPrincipal"]),
                 "tipoDocumentoIdentificacion": "CC",
-                "numDocumentoIdentificacion": str(num_documento_obligado),  # Usar el documento del obligado
+                "numDocumentoIdentificacion": str(num_documento_obligado),
                 "vrServicio": row["vrServicio"],
                 "valorPagoModerador": row["valorPagoModerador"],
                 "conceptoRecaudo": "03",
                 "numFEVPagoModerador": "",
-                "consecutivo": i + 1
+                "consecutivo": contadores_consultas[doc]  # Usar el contador específico del usuario
             }
             usuarios_map[doc]["servicios"]["consultas"].append(consulta)
         else:
             print(f"⚠️ Usuario no encontrado para consulta: {doc}")
 
     # Procesar procedimientos
-    for i, row in df_procedimientos.iterrows():
+    # Crear un diccionario para mantener el contador de procedimientos por usuario
+    contadores_procedimientos = {}
+    
+    for _, row in df_procedimientos.iterrows():
         doc = str(row["IDPaciente"])
         if doc in usuarios_map:
+            # Inicializar contador si no existe para este usuario
+            if doc not in contadores_procedimientos:
+                contadores_procedimientos[doc] = 1
+            else:
+                contadores_procedimientos[doc] += 1
+                
             procedimiento = {
-                "codPrestador": cod_prestador,  # Usar el código de prestador dinámico
-                "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),  # Corregido el nombre del campo
+                "codPrestador": cod_prestador,
+                "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),
                 "idMIPRES": "",
                 "numAutorizacion": str(row["numAutorizacion"]),
                 "codProcedimiento": str(row["CUPS"]),
@@ -91,7 +109,7 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
                 "codServicio": row["codServicio"],
                 "finalidadTecnologiaSalud": "15",
                 "tipoDocumentoIdentificacion": "CC",
-                "numDocumentoIdentificacion": str(num_documento_obligado),  # Usar el documento del obligado
+                "numDocumentoIdentificacion": str(num_documento_obligado),
                 "codDiagnosticoPrincipal": str(row["CIE10_Principal"]),
                 "codDiagnosticoRelacionado": None if pd.isna(row["CIE10_relacionado"]) else str(row["CIE10_relacionado"]),
                 "codComplicacion": None,
@@ -99,7 +117,7 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
                 "conceptoRecaudo": "03",
                 "valorPagoModerador": row["valorPagoModerador"],
                 "numFEVPagoModerador": "",
-                "consecutivo": i + 1
+                "consecutivo": contadores_procedimientos[doc]  # Usar el contador específico del usuario
             }
             usuarios_map[doc]["servicios"]["procedimientos"].append(procedimiento)
         else:

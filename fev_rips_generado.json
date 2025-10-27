@@ -12,7 +12,7 @@
       "codSexo": "F",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 1,
@@ -33,14 +33,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "1",
+            "tipoDiagnosticoPrincipal": "01",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 65540,
             "valorPagoModerador": 39200,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 2
+            "consecutivo": 1
           },
           {
             "codPrestador": "110010136201",
@@ -57,14 +57,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 73850,
             "valorPagoModerador": 39200,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 8
+            "consecutivo": 2
           }
         ]
       }
@@ -77,7 +77,7 @@
       "codSexo": "M",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 2,
@@ -98,14 +98,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 84265,
             "valorPagoModerador": 39200,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 3
+            "consecutivo": 1
           }
         ]
       }
@@ -118,7 +118,7 @@
       "codSexo": "F",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 3,
@@ -139,14 +139,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 56492,
             "valorPagoModerador": 28100,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 4
+            "consecutivo": 1
           },
           {
             "codPrestador": "110010136201",
@@ -163,14 +163,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 73850,
             "valorPagoModerador": 28100,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 7
+            "consecutivo": 2
           }
         ]
       }
@@ -183,7 +183,7 @@
       "codSexo": "F",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 4,
@@ -204,14 +204,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 106147,
             "valorPagoModerador": 39200,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 5
+            "consecutivo": 1
           }
         ]
       }
@@ -224,7 +224,7 @@
       "codSexo": "M",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 5,
@@ -245,14 +245,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 73850,
             "valorPagoModerador": 30900,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 6
+            "consecutivo": 1
           }
         ]
       }
@@ -265,7 +265,7 @@
       "codSexo": "F",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 6,
@@ -286,14 +286,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 73850,
             "valorPagoModerador": 28100,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 9
+            "consecutivo": 1
           }
         ]
       }
@@ -306,7 +306,7 @@
       "codSexo": "M",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 7,
@@ -327,14 +327,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "1",
+            "tipoDiagnosticoPrincipal": "01",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 65540,
             "valorPagoModerador": 39200,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 10
+            "consecutivo": 1
           }
         ]
       }
@@ -347,7 +347,7 @@
       "codSexo": "F",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 8,
@@ -368,14 +368,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 73850,
             "valorPagoModerador": 28100,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 11
+            "consecutivo": 1
           }
         ]
       }
@@ -388,7 +388,7 @@
       "codSexo": "F",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 9,
@@ -409,14 +409,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 73850,
             "valorPagoModerador": 28100,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 12
+            "consecutivo": 1
           }
         ]
       }
@@ -429,7 +429,7 @@
       "codSexo": "M",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 10,
@@ -450,14 +450,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 84265,
             "valorPagoModerador": 39200,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 13
+            "consecutivo": 1
           }
         ]
       }
@@ -470,7 +470,7 @@
       "codSexo": "F",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 11,
@@ -491,14 +491,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 56492,
             "valorPagoModerador": 28100,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 14
+            "consecutivo": 1
           }
         ]
       }
@@ -511,7 +511,7 @@
       "codSexo": "M",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 12,
@@ -532,14 +532,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 84265,
             "valorPagoModerador": 39200,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 15
+            "consecutivo": 1
           }
         ]
       }
@@ -552,7 +552,7 @@
       "codSexo": "F",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 13,
@@ -573,14 +573,14 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 65540,
             "valorPagoModerador": 39200,
             "conceptoRecaudo": "03",
             "numFEVPagoModerador": "",
-            "consecutivo": 16
+            "consecutivo": 1
           }
         ]
       }
@@ -593,7 +593,7 @@
       "codSexo": "F",
       "codPaisResidencia": "170",
       "codMunicipioResidencia": "11001",
-      "codZonaTerritorialResidencia": "2",
+      "codZonaTerritorialResidencia": "02",
       "incapacidad": "NO",
       "codPaisOrigen": "170",
       "consecutivo": 14,
@@ -614,7 +614,7 @@
             "codDiagnosticoRelacionado1": null,
             "codDiagnosticoRelacionado2": null,
             "codDiagnosticoRelacionado3": null,
-            "tipoDiagnosticoPrincipal": "3",
+            "tipoDiagnosticoPrincipal": "03",
             "tipoDocumentoIdentificacion": "CC",
             "numDocumentoIdentificacion": "19085105",
             "vrServicio": 84265,
