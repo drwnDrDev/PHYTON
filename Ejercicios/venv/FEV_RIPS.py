@@ -4,7 +4,7 @@ import numpy as np
 import inspect
 
 # 📥 Cargar archivo Excel
-archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_Ordonez\\RIPS CONSULTA MED PLUS OCTUBRE 2025.xlsx"
+archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_Ordonez\\RIPS CIRUGIA MAURICIO ULLOA.xlsx"
 xls = pd.ExcelFile(archivo_excel)
 
 # 🧩 Funciones auxiliares
@@ -99,21 +99,21 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
             procedimiento = {
                 "codPrestador": cod_prestador,
                 "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),
-                "idMIPRES": "",
+                "idMIPRES": None,
                 "numAutorizacion": str(row["numAutorizacion"]),
                 "codProcedimiento": str(row["CUPS"]),
                 "viaIngresoServicioSalud": "01",
                 "modalidadGrupoServicioTecSal": "01",
                 "grupoServicios": "01",
                 "codServicio": row["codServicio"],
-                "finalidadTecnologiaSalud": "15",
+                "finalidadTecnologiaSalud": "16",
                 "tipoDocumentoIdentificacion": "CC",
                 "numDocumentoIdentificacion": str(num_documento_obligado),
                 "codDiagnosticoPrincipal": str(row["CIE10_Principal"]),
                 "codDiagnosticoRelacionado": None if pd.isna(row["CIE10_relacionado"]) else str(row["CIE10_relacionado"]),
                 "codComplicacion": None,
                 "vrServicio": row["vrServicio"],
-                "conceptoRecaudo": "03",
+                "conceptoRecaudo": "05",
                 "valorPagoModerador": row["valorPagoModerador"],
                 "numFEVPagoModerador": "",
                 "consecutivo": contadores_procedimientos[doc]  # Usar el contador específico del usuario
