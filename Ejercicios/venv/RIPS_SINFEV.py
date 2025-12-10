@@ -4,7 +4,7 @@ import numpy as np
 import inspect
 
 # 📥 Cargar archivo Excel
-archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_JairoCorrea\\drCorrea_092025.xlsx"
+archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_JairoCorrea\\drCorrea_102025.xlsx"
 xls = pd.ExcelFile(archivo_excel)
 
 # 🧩 Funciones auxiliares
@@ -44,9 +44,18 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
     cod_prestador = str(cod_prestador)
     
     # Procesar consultas
-    for i, row in df_consultas.iterrows():
+    # Crear un diccionario para mantener el contador de consultas por usuario
+    contadores_consultas = {}
+    
+    for _, row in df_consultas.iterrows():
         doc = str(row["IDPaciente"])
         if doc in usuarios_map:
+            # Inicializar contador si no existe para este usuario
+            if doc not in contadores_consultas:
+                contadores_consultas[doc] = 1
+            else:
+                contadores_consultas[doc] += 1
+                
             consulta = {
                 "codPrestador": cod_prestador,  # Usar el código de prestador dinámico
                 "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),  # Corregido el nombre del campo
@@ -69,16 +78,25 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
                 "valorPagoModerador": 0,
                 "conceptoRecaudo": "05",
                 "numFEVPagoModerador": "",
-                "consecutivo": i + 1
+                "consecutivo": contadores_consultas[doc]  # Usar el contador específico del usuario
             }
             usuarios_map[doc]["servicios"]["consultas"].append(consulta)
         else:
             print(f"⚠️ Usuario no encontrado para consulta: {doc}")
 
     # Procesar procedimientos
-    for i, row in df_procedimientos.iterrows():
+    # Crear un diccionario para mantener el contador de procedimientos por usuario
+    contadores_procedimientos = {}
+    
+    for _, row in df_procedimientos.iterrows():
         doc = str(row["IDPaciente"])
         if doc in usuarios_map:
+            # Inicializar contador si no existe para este usuario
+            if doc not in contadores_procedimientos:
+                contadores_procedimientos[doc] = 1
+            else:
+                contadores_procedimientos[doc] += 1
+                
             procedimiento = {
                 "codPrestador": cod_prestador,  # Usar el código de prestador dinámico
                 "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),  # Corregido el nombre del campo
@@ -99,7 +117,7 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
                 "conceptoRecaudo": "05",
                 "valorPagoModerador": 0,
                 "numFEVPagoModerador": "",
-                "consecutivo": i + 1
+                "consecutivo": contadores_procedimientos[doc]  # Usar el contador específico del usuario
             }
             usuarios_map[doc]["servicios"]["procedimientos"].append(procedimiento)
         else:
