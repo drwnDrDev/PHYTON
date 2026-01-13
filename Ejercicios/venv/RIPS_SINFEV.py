@@ -4,7 +4,7 @@ import numpy as np
 import inspect
 
 # 📥 Cargar archivo Excel
-archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_JairoCorrea\\drCorrea_102025.xlsx"
+archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_JairoCorrea\\drCorrea_112025.xlsx"
 xls = pd.ExcelFile(archivo_excel)
 
 # 🧩 Funciones auxiliares
@@ -61,7 +61,6 @@ def cargar_consultas_y_procedimientos(df_consultas, df_procedimientos, usuarios_
                 "fechaInicioAtencion": pd.to_datetime(row["fechaInicioAtencion"]).strftime('%Y-%m-%d %H:%M'),  # Corregido el nombre del campo
                 "numAutorizacion": "",
                 "codConsulta": str(row["CUPS"]),
-                "viaIngresoServicioSalud": "01",
                 "modalidadGrupoServicioTecSal": "01",
                 "grupoServicios": "01",
                 "codServicio": row["codServicio"],
