@@ -4,7 +4,7 @@ import numpy as np
 import inspect
 
 # 📥 Cargar archivo Excel
-archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dra_Svetlana\\NEPS LORENA GUIZA-DIEGOMONROY Enero2026.xlsx"
+archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_Ordonez\\RIPS CIRUGIA SEGUROS BOLIVAR CARLOS GONZALEZ.xlsx"
 xls = pd.ExcelFile(archivo_excel)
 
 # 🧩 Funciones auxiliares
