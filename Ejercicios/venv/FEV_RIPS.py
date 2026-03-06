@@ -4,7 +4,7 @@ import numpy as np
 import inspect
 
 # 📥 Cargar archivo Excel
-archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_Ordonez\\RIPS CIRUGIA SEGUROS BOLIVAR CARLOS GONZALEZ.xlsx"
+archivo_excel = "C:\\Users\\dwndz\\OneDrive\\Escritorio\\RIPS\\Dr_Ordonez\\RIPS MYRIAM TOVAR URBANO ABRIL 09 DE 2025.xlsx"
 xls = pd.ExcelFile(archivo_excel)
 
 # 🧩 Funciones auxiliares
@@ -207,7 +207,7 @@ def convert_numpy_types(obj):
 
 # Modifica la parte de guardado para limpiar los datos antes de serializar
 try:
-    ruta_salida = "C:\\CURSOS DEV\\PHYTON\\fev_rips_generado.json"
+    ruta_salida = "C:\\drwnDev\\PHYTON\\fev_rips_generado.json"
     
     # Reemplazar "nan" por null en todo el objeto antes de serializar
     def clean_nan_values(obj):
